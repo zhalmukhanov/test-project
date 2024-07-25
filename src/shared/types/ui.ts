@@ -5,8 +5,14 @@ export type MainHeaderLink = {
 }
 
 export type MainHeaderLinks = {
-  right: MainHeaderLink;
-  left: MainHeaderLink;
+  right?: MainHeaderLink;
+  left?: MainHeaderLink;
+}
+
+export type MainHeaderProps = {
+  links?: MainHeaderLinks;
+  title: string;
+  light?: boolean;
 }
 
 export type BottomBarTab = {

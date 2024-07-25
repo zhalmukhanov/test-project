@@ -75,6 +75,7 @@ defineProps({
   }
 
   &__label {
+    display: block;
     margin-left: 25px;
     font-size: 14px;
     font-weight: 400;

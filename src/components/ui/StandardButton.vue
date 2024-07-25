@@ -10,6 +10,10 @@ defineProps({
   disabled: {
     type: Boolean as PropType<boolean>,
     default: false
+  },
+  fullWidth: {
+    type: Boolean as PropType<boolean>,
+    default: false
   }
 })
 
@@ -18,7 +22,7 @@ defineProps({
 <template>
   <button
     class="button"
-    :class="`button_${color}`"
+    :class="`button_${color}${fullWidth ? ' button_full-width' : ''}`"
     type="button"
     :disabled="disabled"
   >
@@ -40,6 +44,10 @@ defineProps({
   &_primary {
     background-color: #5DB075;
     color: #FFFFFF;
+  }
+
+  &_full-width {
+    width: 100%;
   }
 
   &_secondary {

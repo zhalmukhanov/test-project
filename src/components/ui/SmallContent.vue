@@ -3,7 +3,6 @@ import { defineProps, PropType } from 'vue'
 import { Content } from '@/shared/types'
 import { getPassedTime } from '@/shared/helpers'
 
-
 defineProps({
   content: {
     type: Object as PropType<Content>,

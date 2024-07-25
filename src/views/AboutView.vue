@@ -2,7 +2,7 @@
   <div class="about">
     <large-content style="margin-top: 20px" :content="content"/>
 
-    <main-header text="Sign Up" :links="headerLinks"/>
+    <main-header title="Sign Up" :links="headerLinks"/>
 
     <bottom-bar style="margin-top: 20px;" :tabs="bottomBarTabs" :active-tab="'/about'"/>
 

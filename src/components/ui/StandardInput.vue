@@ -26,12 +26,14 @@ defineProps({
 
 <style scoped lang="scss">
 .input {
+  box-sizing: border-box;
+  height: 50px;
   border: 1px solid #E8E8E8;
   border-radius: 8px;
   padding: 16px;
   font-size: 16px;
   font-weight: 500;
-  line-height: 19.36px;
+  line-height: 10px;
   text-align: left;
   color: #6a6a6a;
   background-color: #F6F6F6;

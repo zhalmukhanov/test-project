@@ -41,11 +41,11 @@ const togglePasswordVisibility = () => {
   position: relative;
 
   &__input {
-    max-width: 100%;
+    width: 100%;
   }
   &__btn {
     position: absolute;
-    top: 16px;
+    top: 14px;
     right: 16px;
     font-size: 16px;
     font-weight: 500;

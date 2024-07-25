@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { computed, defineProps, PropType, ref } from 'vue'
 import { SegmentControlTab } from '@/shared/types'
 
@@ -22,8 +21,6 @@ const backStyle = computed(() => {
     transform: `translateX(${100 * (tabIndex === -1 ? 0 : tabIndex)}%)`
   }
 })
-
-
 </script>
 
 <template>

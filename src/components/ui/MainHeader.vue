@@ -5,9 +5,9 @@ import { MainHeaderLinks } from '@/shared/types'
 defineProps({
   links: {
     type: Object as PropType<MainHeaderLinks>,
-    required: true
+    required: false
   },
-  text: {
+  title: {
     type: String as PropType<string>,
     required: true
   }
@@ -17,9 +17,24 @@ defineProps({
 
 <template>
   <div class="header">
-    <router-link class="header__libk" :to="links.right.link">Home</router-link>
-    <span class="header__title">{{text}}</span>
-    <router-link class="header__libk" :to="links.left.link">About</router-link>
+    <span class="header__libk header__libk_left">
+      <router-link
+        v-if="links?.left"
+        :to="links.left.link"
+      >
+        {{ links.left.name }}
+      </router-link>
+    </span>
+    <span class="header__title">{{title}}</span>
+
+    <span class="header__libk header__libk_right">
+      <router-link
+        v-if="links?.right"
+        :to="links.right.link"
+      >
+        {{ links.right.name }}
+      </router-link>
+    </span>
   </div>
 
 </template>
@@ -32,12 +47,26 @@ defineProps({
   gap: 8px;
 
   &__libk {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19.36px;
-    text-align: left;
-    text-decoration: none;
-    color: #5DB075;
+    width: 70px;
+    display: flex;
+
+    & a {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.36px;
+      text-align: left;
+      text-decoration: none;
+      color: #5DB075;
+    }
+
+    &_left {
+      justify-content: start;
+
+    }
+
+    &_right {
+      justify-content: end;
+    }
   }
 
   &__title {
