@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { loadLayout } from './middleware/loadLayout'
+import { AppLayoutsEnum } from '@/shared/types'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -10,10 +12,27 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    meta: {
+      layout: AppLayoutsEnum.login
+    }
+  },
+
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "about" */ '../pages/LoginPage.vue'),
+    meta: {
+      layout: AppLayoutsEnum.login
+    }
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: () => import(/* webpackChunkName: "about" */ '../pages/SignupPage.vue'),
+    meta: {
+      layout: AppLayoutsEnum.login
+    }
   }
 ]
 
@@ -21,5 +40,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+router.beforeEach(loadLayout)
 
 export default router
