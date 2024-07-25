@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, defineProps, PropType, ref } from 'vue'
-import StandartInput from '@/components/ui/StandartInput.vue'
+import StandartInput from '@/components/ui/StandardInput.vue'
 
 defineProps({
   placeholder: {

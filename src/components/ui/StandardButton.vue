@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { defineProps, PropType } from 'vue'
+import { ButtonType } from '@/shared/types'
 
 defineProps({
   color: {
-    type: String as PropType<'primary' | 'secondary'>,
+    type: String as PropType<ButtonType>,
     default: 'primary'
   },
   disabled: {

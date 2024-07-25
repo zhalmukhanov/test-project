@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-import StandartInput from '@/components/ui/StandartInput.vue'
+import StandardInput from '@/components/ui/StandardInput.vue'
 import { defineProps, PropType } from 'vue'
 
 defineProps({
@@ -13,7 +12,7 @@ defineProps({
 </script>
 
 <template>
- <standart-input :placeholder="placeholder" full-rounded/>
+ <standard-input :placeholder="placeholder" full-rounded/>
 </template>
 
 <style scoped lang="scss">

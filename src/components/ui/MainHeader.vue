@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps, PropType } from 'vue'
-import { MainHeaderLinks } from '@/shared/types/ui'
+import { MainHeaderLinks } from '@/shared/types'
 
 defineProps({
   links: {

@@ -14,3 +14,16 @@ export type BottomBarTab = {
   link: string;
   order: number;
 }
+
+export type SegmentControlTab = {
+  name: string;
+  value: string;
+}
+
+export type ButtonType = 'primary' | 'secondary';
+
+export type Content = {
+  title: string;
+  text: string;
+  time: string;
+}
