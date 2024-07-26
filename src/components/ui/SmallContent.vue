@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { defineProps, PropType } from 'vue'
-import { Content } from '@/shared/types'
+import { Post } from '@/shared/types'
 import { getPassedTime } from '@/shared/helpers'
 
 defineProps({
-  content: {
-    type: Object as PropType<Content>,
+  post: {
+    type: Object as PropType<Post>,
     required: true
   }
 })
@@ -16,10 +16,10 @@ defineProps({
   <div class="content__img"/>
   <div class="content__body">
     <div class="content__body_header">
-      <h4 class="content__body_header_title">{{ content.title }}</h4>
-      <span class="content__body_header_info">{{ getPassedTime(content.time) }}</span>
+      <h4 class="content__body_header_title">{{ post.title }}</h4>
+      <span class="content__body_header_info">{{ getPassedTime(post.time) }}</span>
     </div>
-    <p class="content__body_text">{{ content.text }}</p>
+    <p class="content__body_text">{{ post.content }}</p>
   </div>
 </div>
 </template>
@@ -62,6 +62,8 @@ defineProps({
       }
 
       &_info {
+        width: 80px;
+
         font-size: 14px;
         font-weight: 400;
         line-height: 16.94px;

@@ -1,6 +1,6 @@
 import { MainHeaderProps } from '@/shared/types'
 
-export const headerValues: Record<string, MainHeaderProps> = {
+export const loginHeaderValues: Record<string, MainHeaderProps> = {
   login: {
     title: 'Log In'
   },

@@ -10,13 +10,23 @@ defineProps({
   title: {
     type: String as PropType<string>,
     required: true
+  },
+  display: {
+    type: Boolean as PropType<boolean>,
+    required: false,
+    default: true
+  },
+  light: {
+    type: Boolean as PropType<boolean>,
+    required: false,
+    default: false
   }
 })
 
 </script>
 
 <template>
-  <div class="header">
+  <div v-if="display" class="header" :class="{'header-light': light}">
     <span class="header__libk header__libk_left">
       <router-link
         v-if="links?.left"
@@ -36,6 +46,7 @@ defineProps({
       </router-link>
     </span>
   </div>
+  <div v-else/>
 
 </template>
 
@@ -74,6 +85,14 @@ defineProps({
     font-weight: 600;
     line-height: 36.31px;
     text-align: center;
+  }
+}
+
+.header-light {
+   color: white;
+
+  & a {
+    color: white;
   }
 }
 </style>

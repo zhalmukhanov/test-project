@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { defineProps, PropType } from 'vue'
-import { Content } from '@/shared/types'
+import { Post } from '@/shared/types'
 import { getPassedTime } from '@/shared/helpers'
 
 defineProps({
-  content: {
-    type: Object as PropType<Content>,
+  post: {
+    type: Object as PropType<Post>,
     required: true
   }
 })
@@ -16,9 +16,9 @@ defineProps({
 <div class="content">
   <div class="content__img"/>
   <div class="content__body">
-    <h4 class="content__body_title">{{content.title}}</h4>
-    <p class="content__body_text">{{content.text}}</p>
-    <span class="content__body_info">{{ getPassedTime(content.time) }}</span>
+    <h4 class="content__body_title">{{post.title}}</h4>
+    <p class="content__body_text">{{post.content}}</p>
+    <span class="content__body_info">{{ getPassedTime(post.time) }}</span>
   </div>
   <div class="content__footer">
     <div v-for="i in 3" :key="i" class="content__footer_item" :class="{'content__footer_item_active': i === 1}"/>
