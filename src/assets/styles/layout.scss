@@ -1,0 +1,9 @@
+.layout {
+  box-sizing: border-box;
+  padding: 16px;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

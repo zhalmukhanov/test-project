@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, defineProps, PropType, ref } from 'vue'
-import { SegmentControlTab } from '@/shared/types'
+import { computed, defineProps, PropType, defineModel } from 'vue'
+import type { SegmentControlTab } from '@/shared/types'
 
 const props = defineProps({
   tabs: {
@@ -9,13 +9,13 @@ const props = defineProps({
   }
 })
 
-const selectedTab = ref<null | string>(null)
+const modelValue = defineModel()
 const tabCount = computed(() => {
   return props.tabs.length
 })
 
 const backStyle = computed(() => {
-  const tabIndex = props.tabs.findIndex((tab) => tab.value === selectedTab.value)
+  const tabIndex = props.tabs.findIndex((tab) => tab.value === modelValue.value)
   return {
     width: `${100 / tabCount.value}%`,
     transform: `translateX(${100 * (tabIndex === -1 ? 0 : tabIndex)}%)`
@@ -30,14 +30,14 @@ const backStyle = computed(() => {
         v-for="tab in tabs"
         :key="tab.value"
         class="control__item"
-        :class="{'control__item_active': selectedTab === tab.value}"
+        :class="{'control__item_active': modelValue === tab.value}"
       >
         <input
           type="radio"
           name="segmentControl"
           :id="`tab-${tab.value}`"
           :value="tab.value"
-          @change="selectedTab = tab.value"
+          @change="modelValue = tab.value"
         >
         <label :for="`tab-${tab.value}`">
           <span>{{tab.name}}</span>

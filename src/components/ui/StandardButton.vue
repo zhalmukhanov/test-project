@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps, PropType } from 'vue'
-import { ButtonType } from '@/shared/types'
+import type { ButtonType } from '@/shared/types'
 
 defineProps({
   color: {

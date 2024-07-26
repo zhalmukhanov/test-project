@@ -13,6 +13,7 @@ export type MainHeaderProps = {
   links?: MainHeaderLinks;
   title: string;
   light?: boolean;
+  display?: boolean;
 }
 
 export type BottomBarTab = {

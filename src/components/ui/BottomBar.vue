@@ -1,7 +1,6 @@
 <script setup lang="ts">
-
 import { defineProps, PropType } from 'vue'
-import { BottomBarTab } from '@/shared/types'
+import type { BottomBarTab } from '@/shared/types'
 
 defineProps({
   tabs: {
@@ -17,18 +16,27 @@ defineProps({
 </script>
 
 <template>
-  <div class="bottom-bar">
-    <router-link
-      v-for="tab in tabs"
-      :key="tab.link"
-      :to="tab.link"
-      class="bottom-bar__tab"
-      :class="{ 'bottom-bar__tab_active': tab.link === activeTab }"
-    />
+  <div class="wrapper">
+    <div class="bottom-bar">
+      <router-link
+        v-for="tab in tabs"
+        :key="tab.link"
+        :to="tab.link"
+        class="bottom-bar__tab"
+        :class="{ 'bottom-bar__tab_active': tab.link === activeTab }"
+      />
+    </div>
   </div>
+
 </template>
 
 <style scoped lang="scss">
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 .bottom-bar {
   background-color: #FAFAFA;
   height: 83px;

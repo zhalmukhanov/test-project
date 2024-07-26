@@ -4,10 +4,12 @@ const route = useRoute()
 </script>
 
 <template>
-
-  <component :is="route.meta.layoutComponent">
-    <slot />
-  </component>
+  <transition :name="'page'">
+    <component :is="route.meta.layoutComponent">
+      <slot />
+    </component>
+  </transition>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
