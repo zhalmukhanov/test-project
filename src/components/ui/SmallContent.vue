@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineProps, PropType } from 'vue'
-import { Post } from '@/shared/types'
 import { getPassedTime } from '@/shared/helpers'
+import type { Post } from '@/shared/types'
 
 defineProps({
   post: {

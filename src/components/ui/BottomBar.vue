@@ -1,7 +1,6 @@
 <script setup lang="ts">
-
 import { defineProps, PropType } from 'vue'
-import { BottomBarTab } from '@/shared/types'
+import type { BottomBarTab } from '@/shared/types'
 
 defineProps({
   tabs: {

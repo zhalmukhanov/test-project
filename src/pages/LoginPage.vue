@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+
 import StandardInput from '@/components/ui/StandardInput.vue'
 import PasswordInput from '@/components/ui/PasswordInput.vue'
 import StandardButton from '@/components/ui/StandardButton.vue'
-import { useRouter } from 'vue-router'
 
 const router = useRouter()
 

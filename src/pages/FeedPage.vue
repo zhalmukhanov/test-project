@@ -2,11 +2,11 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
-import SearchInput from '@/components/ui/SearchInput.vue'
-
 import { usePosts } from '@/composables/posts'
+
 import SmallContent from '@/components/ui/SmallContent.vue'
 import LargeContent from '@/components/ui/LargeContent.vue'
+import SearchInput from '@/components/ui/SearchInput.vue'
 
 const router = useRouter()
 const { newPosts, posts, getPosts, nextPage } = usePosts()

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-
-import { useRoute } from 'vue-router'
 import { onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
+
 import { usePostsStore } from '@/stores/post-store'
-import { Post } from '@/shared/types'
+import type { Post } from '@/shared/types'
 
 const route = useRoute()
 const store = usePostsStore()

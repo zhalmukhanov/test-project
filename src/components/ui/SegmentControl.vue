@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, defineProps, PropType, ref, defineModel } from 'vue'
-import { SegmentControlTab } from '@/shared/types'
+import { computed, defineProps, PropType, defineModel } from 'vue'
+import type { SegmentControlTab } from '@/shared/types'
 
 const props = defineProps({
   tabs: {

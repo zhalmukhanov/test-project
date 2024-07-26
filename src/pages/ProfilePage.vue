@@ -7,7 +7,7 @@ import SegmentControl from '@/components/ui/SegmentControl.vue'
 import ProfilePosts from '@/components/profile/ProfilePosts.vue'
 import ProfilePhoto from '@/components/profile/ProfilePhoto.vue'
 
-import { SegmentControlTab } from '@/shared/types'
+import type { SegmentControlTab } from '@/shared/types'
 
 const segmentControlTabs: SegmentControlTab[] = [
   {

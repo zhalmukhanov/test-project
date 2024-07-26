@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import MainHeader from '@/components/ui/MainHeader.vue'
 import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+
+import MainHeader from '@/components/ui/MainHeader.vue'
+
 import { loginHeaderValues as header } from '@/layouts/values'
 
 const route = useRoute()

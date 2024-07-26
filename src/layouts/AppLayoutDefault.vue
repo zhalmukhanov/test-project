@@ -3,8 +3,9 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 import MainHeader from '@/components/ui/MainHeader.vue'
-import { bottomBarTabs as tabs, defaultHeaderValues as header } from '@/layouts/values'
 import BottomBar from '@/components/ui/BottomBar.vue'
+
+import { bottomBarTabs as tabs, defaultHeaderValues as header } from '@/layouts/values'
 
 const route = useRoute()
 

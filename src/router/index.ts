@@ -1,21 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import { loadLayout } from './middleware/loadLayout'
 import { AppLayoutsEnum } from '@/shared/types'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
-    meta: {
-      layout: AppLayoutsEnum.login
-    }
+    redirect: '/feed'
   },
 
   {
