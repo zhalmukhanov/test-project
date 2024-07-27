@@ -342,7 +342,7 @@ src
 │   └── posts.ts
 ├── layouts
 │   ├── values
-│   │   └── AppLayout.vue
+│   ├── AppLayout.vue
 │   ├── AppLayoutDefault.vue
 │   ├── AppLayoutEmpty.vue
 │   └── AppLayoutLogin.vue
@@ -370,8 +370,8 @@ src
 │       └── user.ts
 ├── stores
 │   └── values
-│       ├── post-store.ts
-│       └── user-store.ts
+│   ├── post-store.ts
+│   └── user-store.ts
 ├── App.vue
 └── main.ts
 ```
@@ -392,6 +392,7 @@ src
 #### `layouts`
 Компоненты макетов, которые определяют структуру страницы:
 - `values`: Вспомогательные файлы для макетов.
+- `AppLayout.vue`: основной макет приложения. Этот макет может быть использован для обертки других макетов или страниц, предоставляя единообразную структуру.
 - `AppLayoutDefault.vue`, `AppLayoutEmpty.vue`, `AppLayoutLogin.vue`: Различные макеты страниц.
 
 #### `pages`
@@ -404,12 +405,13 @@ src
 
 #### `shared`
 Общие модули и типы, используемые в различных частях приложения:
-- `helpers`: Вспомогательные функции (например, `index.ts`, `time.ts`).
-- `types`: Определения типов TypeScript (например, `index.ts`, `layouts.ts`, `post.ts`, `router.ts`, `ui.ts`, `user.ts`).
+- `helpers`: Вспомогательные функции (например, `time.ts`).
+- `types`: Определения типов TypeScript (например, `layouts.ts`, `post.ts`, `router.ts`, `ui.ts`, `user.ts`).
 
 #### `stores`
 Хранилища (store) для управления состоянием приложения:
-- `values`: Начальные значения для хранилищ (например, `post-store.ts`, `user-store.ts`).
+- `values`: Начальные значения для хранилищ
+- `post-store.ts`, `user-store.ts` store файлы.
 
 #### `App.vue`
 Основной компонент приложения Vue.
